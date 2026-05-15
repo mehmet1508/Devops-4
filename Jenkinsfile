@@ -15,10 +15,11 @@ pipeline {
         }
 
         stage('Stage 2: Build the project') {
-            steps {
-                echo 'Proje derleniyor ve jar dosyasi oluşturuluyor...'
-                sh 'gradle clean bootJar'
-            }
+                    steps {
+                        echo 'Proje derleniyor ve jar dosyasi oluşturuluyor...'
+                        sh 'chmod +x gradlew'
+                        sh './gradlew clean bootJar'
+                    }
         }
 
         stage('Stage 3: Create a docker image') {
