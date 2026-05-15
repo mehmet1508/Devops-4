@@ -46,8 +46,8 @@ pipeline {
         stage('Stage 6: Run K8s deployment and service') {
             steps {
                 echo 'Kubernetes deployment ve service çalıştırılıyor...'
-                sh 'kubectl apply -f webapp-deploy.yml'
-                sh 'kubectl apply -f webapp-service.yml'
+                sh 'kubectl apply -f webapp-deploy.yaml'
+                sh 'kubectl apply -f webapp-service.yaml'
             }
         }
     }
