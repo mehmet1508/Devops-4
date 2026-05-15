@@ -48,6 +48,7 @@ pipeline {
                 echo 'Kubernetes deployment ve service çalıştırılıyor...'
                 sh 'kubectl apply -f webapp-deploy.yaml'
                 sh 'kubectl apply -f webapp-service.yaml'
+                sh 'kubectl rollout restart deployment/devops-4'
             }
         }
     }
