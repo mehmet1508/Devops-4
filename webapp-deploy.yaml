@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: Devops-4
+  labels:
+    app: Devops-4
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: Devops-4
+  template:
+    metadata:
+      name: Devops-4
+      labels:
+        app: Devops-4
+    spec:
+      containers:
+        - name: Devops-4
+          image: mkerem1508/devops-4:latest
+          ports:
+            - containerPort: 8080
+
+
+      
